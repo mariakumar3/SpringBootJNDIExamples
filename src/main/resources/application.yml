@@ -1,0 +1,31 @@
+server:
+  port: 8080             
+      
+spring:
+  profiles:
+    active: dev 
+  application:
+    name: jndi
+  datasource:
+   url: jdbc:mysql://localhost:3306/mysql?autoReconnect=true
+   driver-class-name: com.mysql.cj.jdbc.Driver   
+   username: root
+   password: admin@123
+   jndi-name: java:/comp/env/jdbc/jcrDatabasePool
+   
+
+logging:
+  file: logs/application-debug.log 
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    org.springframework.web: INFO
+    root: INFO
+    sql: INFO
+    web: INFO
+
+  
+  
+
+     
