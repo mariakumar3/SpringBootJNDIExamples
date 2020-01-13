@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 	
 	
-	@GetMapping("/test")
+	@GetMapping("/testdb")
 	public String getObject() throws Exception {
 		Context ctx = new InitialContext();
 		DataSource dataSource = (DataSource) ctx.lookup("java:/comp/env/jndiDataSource");
