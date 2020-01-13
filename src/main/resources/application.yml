@@ -11,7 +11,6 @@ spring:
    driver-class-name: com.mysql.cj.jdbc.Driver   
    username: root
    password: admin@123
-   jndi-name: java:/comp/env/jdbc/jcrDatabasePool
    
 
 logging:
